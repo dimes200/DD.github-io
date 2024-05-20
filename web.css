@@ -1,0 +1,111 @@
+/* styles.css */
+
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background-color: #0074D9;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1rem;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Services section styles */
+#services {
+    padding: 20px;
+    background-color: #fff;
+}
+
+#services h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#services p {
+    font-size: 1rem;
+}
+
+/* Pricing section styles */
+#pricing {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+#pricing h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#pricing p {
+    font-size: 1rem;
+}
+
+/* Contact section styles */
+#contact {
+    padding: 20px;
+    background-color: #fff;
+}
+
+#contact h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#contact p {
+    font-size: 1rem;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Responsive styles (adjust as needed) */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
