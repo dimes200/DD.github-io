@@ -1,26 +1,59 @@
-<!-- Your existing HTML code -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- ... (your existing head content) ... -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pool Cleaning Business</title>
+    <style>
+        /* Basic styling for tabs */
+        .tab {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Your Pool Cleaning Services</h1>
-    <!-- ... (your existing tab container and services content) ... -->
-    <div class="tab-content" id="schedule">
-        <h2>Schedule Your Pool Cleaning</h2>
-        <p>Use our convenient scheduling tool to book an appointment:</p>
-        <!-- Add the Calendly embed code here -->
-        <div class="calendly-inline-widget" data-url="https://calendly.com/your-pool-cleaning/pool-cleaning-appointment"></div>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-        <!-- End of Calendly integration -->
-        <p>Contact us at <a href="mailto:info@yourpoolcleaning.com">info@yourpoolcleaning.com</a> or call (123) 456-7890 if you have any questions.</p>
+    <!-- Navigation tabs -->
+    <div class="tabs">
+        <button onclick="showTab('home')">Home</button>
+        <button onclick="showTab('services')">Services</button>
+        <button onclick="showTab('schedule')">Schedule</button>
     </div>
+
+    <!-- Content for each tab -->
+    <div id="home" class="tab active">
+        <h1>Welcome to Our Pool Cleaning Business!</h1>
+        <!-- Add relevant content here -->
+    </div>
+
+    <div id="services" class="tab">
+        <h2>Our Services</h2>
+        <!-- Describe your pool cleaning services -->
+    </div>
+
+    <div id="schedule" class="tab">
+        <h2>Schedule a Cleaning</h2>
+        <p>Select a date and time:</p>
+        <input type="datetime-local" id="cleaningDateTime">
+        <button onclick="scheduleCleaning()">Schedule</button>
+    </div>
+
+    <!-- JavaScript for tab switching and scheduling -->
     <script>
-        function showTab(tabId) {
-            // Your existing tab switching logic (keep as is)
-            // ...
+        function showTab(tabName) {
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+        }
+
+        function scheduleCleaning() {
+            const dateTime = document.getElementById('cleaningDateTime').value;
+            // Handle scheduling logic (e.g., send data to server)
+            console.log(`Scheduled cleaning for ${dateTime}`);
         }
     </script>
 </body>
 </html>
+
