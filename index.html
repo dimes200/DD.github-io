@@ -3,36 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Pool Cleaning Business</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Your Pool Cleaning Services</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #0074D9;
+        }
+        p {
+            font-size: 16px;
+            color: #333;
+        }
+        /* Tabs styling */
+        .tab-container {
+            display: flex;
+        }
+        .tab {
+            padding: 10px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+        }
+        .tab.active {
+            background-color: #0074D9;
+            color: #fff;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Your Pool Cleaning Services</h1>
-        <p>Keeping Pools Sparkling Clean!</p>
-    </header>
-    <nav>
+    <h1>Welcome to Your Pool Cleaning Services</h1>
+    <div class="tab-container">
+        <div class="tab active" onclick="showTab('services')">Services</div>
+        <div class="tab" onclick="showTab('schedule')">Schedule</div>
+    </div>
+    <div class="tab-content" id="services">
+        <h2>Our Pool Cleaning Services</h2>
+        <p>We specialize in all aspects of caring for your swimming pool so you can enjoy it all year!</p>
+        <p>Our services include:</p>
         <ul>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li>Regular pool cleaning and maintenance</li>
+            <li>Chemical balancing</li>
+            <li>Filter cleaning</li>
+            <li>Equipment inspection and repair</li>
+            <!-- Add more details about your services here -->
         </ul>
-    </nav>
-    <section id="services">
-        <h2>Our Services</h2>
-        <p>We offer professional pool cleaning, maintenance, and water balancing services.</p>
-    </section>
-    <section id="pricing">
-        <h2>Pricing</h2>
-        <p>Contact us for customized pricing based on your pool size and specific needs.</p>
-    </section>
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: info@yourpoolcleaning.com</p>
-        <p>Phone: (123) 456-7890</p>
-    </section>
-    <footer>
-        <p>© 2024 Your Pool Cleaning Business</p>
-    </footer>
+    </div>
+    <div class="tab-content" id="schedule">
+        <h2>Schedule Your Pool Cleaning</h2>
+        <p>Use our calendar to book a convenient time for pool cleaning:</p>
+        <!-- Integrate your preferred scheduling tool here -->
+        <p>Contact us at <a href="mailto:info@yourpoolcleaning.com">info@yourpoolcleaning.com</a> or call (123) 456-7890 to schedule an appointment.</p>
+    </div>
+    <script>
+        function showTab(tabId) {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
 </body>
 </html>
+
